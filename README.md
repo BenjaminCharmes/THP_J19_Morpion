@@ -2,9 +2,9 @@
 
 Here are all the exercises in Ruby from day 19 of The Hacking Project: Coding the tic-tac-toe game in Ruby using POO.
 
-## 🎉 Day 4 of the Full Stack training 🎉
+<h2 align="center">🎉 Day 4 of the Full Stack training 🎉</h2>
 
-![](https://media.giphy.com/media/Yj97rLWiH29Hi/giphy.gif)
+<p align="center">![](https://media.giphy.com/media/Yj97rLWiH29Hi/giphy.gif)</p>
 
 ~~ https://github.com/BenjaminCharmes/THP_J19_Morpion ~~
 
