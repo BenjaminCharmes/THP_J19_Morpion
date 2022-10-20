@@ -43,3 +43,7 @@ HAVE FUN AND GOOD LUCK !
 ### Authors Details:
 
 👤 [@BenjaminCharmes](https://github.com/BenjaminCharmes)
+
+### Special thanks:
+
+👤 [@linahello](https://github.com/linahello) for the README.md.
