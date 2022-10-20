@@ -10,6 +10,7 @@ class Game
 
 
   def play_a_round(player)
+    system 'clear'
     puts
     puts "Tour: #{@turn}".red
     @board.display_board

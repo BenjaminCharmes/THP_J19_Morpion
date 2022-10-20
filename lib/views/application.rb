@@ -2,10 +2,10 @@ class Application
   attr_accessor :game_nb, :score_player1, :score_player2
 
   def initialize
-    @players = Array.new
-    @game_nb = 0
+    @game_nb = 1
     @score_player1 = 0
     @score_player2 = 0
+    @players = Array.new
     system 'clear'
     puts
     puts "     XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO     ".colorize(:green)
@@ -32,6 +32,19 @@ class Application
     continue = true
     while continue == true
       game = Game.new
+      system 'clear'
+      puts
+      puts "-".colorize(:green)*(25)
+      puts
+      puts " "*(5) + "Game: #{@game_nb}".green
+      puts
+      print " "*(5) + "#{@players[0].name} #{@score_player1.to_s.blue}"
+      print " - ".green
+      puts "#{@score_player2.to_s.red} #{@players[1].name}"
+      puts
+      puts "-".colorize(:green)*(25)
+      puts 
+      sleep(3)
       while game.is_game_over? == false
         # Player1
         game.play_a_round(@players[0])
@@ -42,7 +55,6 @@ class Application
         if game.is_game_over? == true
           break
         end
-
         # Player2
         game.play_a_round(@players[1])
         game.is_o_win?
@@ -71,7 +83,18 @@ class Application
         puts "It's a draw ! 🤷"
         sleep(2)
       end
-      @game += 1
+      puts
+      puts "-".colorize(:green)*(25)
+      puts
+      puts " "*(5) + "Game: #{@game_nb}".green
+      puts
+      print " "*(5) + "#{@players[0].name} #{@score_player1.to_s.blue}"
+      print " - ".green
+      puts "#{@score_player2.to_s.red} #{@players[1].name}"
+      puts
+      puts "-".colorize(:green)*(25)
+      puts 
+      sleep(2)
       puts
       puts "Want to play again ? 🎲"
       print "Enter: "
@@ -81,6 +104,7 @@ class Application
       print "🖍  > "
       continue_test = gets.chomp
       if continue_test == "y"
+        @game_nb += 1
         continue = true
       else
         continue = false
