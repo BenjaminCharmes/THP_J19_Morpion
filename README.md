@@ -1,4 +1,4 @@
-# Day 19 of The Hacking Project: Morpion / Tic-Tac-Toe
+<h1 align="center">Day 19 of The Hacking Project: Morpion / Tic-Tac-Toe</h1>
 
 Here are all the exercises in Ruby from day 19 of The Hacking Project: Coding the tic-tac-toe game in Ruby using POO.
 
