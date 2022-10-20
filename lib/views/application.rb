@@ -2,6 +2,7 @@ class Application
   attr_accessor :game_nb, :score_player1, :score_player2
 
   def initialize
+    # Play the game on terminal !
     @game_nb = 1
     @score_player1 = 0
     @score_player2 = 0

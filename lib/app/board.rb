@@ -2,15 +2,18 @@ class Board
   attr_accessor :array_of_boardcase, :count_turn
 
   def initialize
+    # Initialize the board with the 9 cases (with each " " default value) and start to count turn.
     @array_of_boardcase = BoardCase.new
     @count_turn = 0
   end
 
   def get_boardcase
+    # Return the array to get every case
     return @array_of_boardcase
   end 
 
   def display_board
+    # Print the board
     puts
     puts "          A   B   C ".green
     puts
@@ -41,6 +44,7 @@ class Board
   end
 
   def update_case(choice, player)
+    # Update the board with player's choice
     array_of_boardcase.case[choice.capitalize] = player.symbol
   end
 

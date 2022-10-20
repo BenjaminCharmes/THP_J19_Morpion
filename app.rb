@@ -8,4 +8,5 @@ require 'app/board'
 require 'app/board_case'
 require 'views/application'
 
+# Launch the_game
 the_game = Application.new

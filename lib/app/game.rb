@@ -4,12 +4,14 @@ class Game
   attr_accessor :board, :turn
 
   def initialize
+    # Initialize a game on turn 1 with a new board
     @turn = 1
     @board = Board.new
   end
 
 
   def play_a_round(player)
+    # Player play a round and make a choice, if can't play here, ask to play again. Then turn +1.
     system 'clear'
     puts
     puts "Tour: #{@turn}".red
@@ -48,6 +50,7 @@ class Game
   end
 
   def is_x_win?
+    # Return true if player x validates one of eight ways to win
     x = "x".red
       if board.get_boardcase.case['A1'] == x && board.get_boardcase.case['A2'] == x && board.get_boardcase.case['A3'] == x
         return true
@@ -71,6 +74,7 @@ class Game
   end
 
   def is_o_win?
+        # Return true if player o validates one of eight ways to win
     o = "o".blue
     if board.get_boardcase.case['A1'] == o && board.get_boardcase.case['A2'] == o && board.get_boardcase.case['A3'] == o
       return true
@@ -94,6 +98,7 @@ class Game
   end 
 
   def is_board_full?
+    # Return true if there is no more space on board
     if board.get_boardcase.case['A1'] != " " && board.get_boardcase.case['A2'] != " " && board.get_boardcase.case['A3'] != " " && board.get_boardcase.case['B1'] != " " && board.get_boardcase.case['B2'] != " " && board.get_boardcase.case['B3'] != " " && board.get_boardcase.case['C1'] != " " && board.get_boardcase.case['C2'] != " " && board.get_boardcase.case['C3'] != " "
       return true
     else
@@ -102,12 +107,14 @@ class Game
   end
 
   def is_game_draw?
+    # Return true if the game is over and no one has won
     if is_o_win? == false && is_x_win? == false && is_board_full? == true
       return true
     end
   end
 
   def is_game_over?
+    # Return true if the game is over
     if is_o_win? == true || is_x_win? == true || is_game_draw? == true
       return true
     else
